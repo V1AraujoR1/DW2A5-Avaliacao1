@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Peças</title>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.15.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/main.css">
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        td {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container">
+        <div class="bg-light text-dark rounded p-4 mt-3 text-center">
+            <h1>Lista de peças</h1>
+        </div>
+
+        <main class="bg-light text-dark rounded p-4 mt-5 text-center">
+            <table>
+                <tr th:each="produto: ${produtos}">
+                    <td th:text="${produto.getSeqProduto()}"></td>
+                    <td th:text="${produto.getNome()}"></td>
+                    <td th:text="${produto.getDescricao()}"></td>
+                    <td th:text="${produto.getMarca()}"></td>
+                    <td th:text="${produto.getReferencia()}"></td>
+                    <td th:text="${produto.getPreco()}"></td>
+                    <td><a th:class="'btn btn-info'" th:href="${produto.getSeqProduto()}"><i
+                                class="fas fa-edit"></i></a></td>
+                    <td><a th:class="'btn btn-danger'" th:href="${produto.getSeqProduto() + '/delete'}"><i
+                                class="fas fa-trash"></i></a></td>
+                </tr>
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>

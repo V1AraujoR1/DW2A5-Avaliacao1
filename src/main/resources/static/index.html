@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Peças</title>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.15.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/static/css/main.css">
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container">
+        <section class="bg-light text-dark rounded p-4 mt-3">
+            <div class="text-center">
+                <h1>Peça</h1>
+            </div>
+            <form class="pt-4">
+                <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="nome">Nome</label>
+                        <input class="form-control" id="nome" type="text" name="nome">
+                        <label class="pt-3 form-label" for="descricao">Descrição</label>
+                        <input class="form-control" id="descricao" type="text" name="descricao">
+                        <label class="pt-3 form-label" for="marca">Marca</label>
+                        <input class="form-control" id="marca" type="text" name="marca">
+                        <label class="pt-3 form-label" for="referencia">Referência</label>
+                        <input class="form-control" id="referencia" type="text" name="referencia">
+                        <label class="pt-3 form-label" for="preco">Preço</label>
+                        <input class="form-control" id="preco" type="number" name="preco">
+
+                        <div class="text-center">
+                            <button id="btnInsert" class="btn btn-primary mt-4 col-2" name="insert" value="insert"
+                                type="submit" formmethod="POST" formaction=""><i class="fas fa-plus"></i></button>
+                            <button id="btnUpdate" class="btn btn-primary mt-4 col-2" name="update" value="update"
+                                type="submit" formmethod="PUT" formaction=""><i class="fas fa-edit"></i></button>
+                            <button id="btnDelete" class="btn btn-primary mt-4 col-2" name="delete" value="delete"
+                                type="submit" formmethod="POST" formaction=""><i class="fas fa-trash"></i></button>
+                            <button id="btnSelect" class="btn btn-primary mt-4 col-2" name="select" value="select"
+                                type="submit" formmethod="GET" formaction=""><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
